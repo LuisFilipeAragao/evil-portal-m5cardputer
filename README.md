@@ -1,10 +1,23 @@
-# Evil Portal :: M5 Stick C Plus / M5 Cardputer
-`DISCLAIMER: This is for educational purposes only. Extracting passwords from unaware victims is illegal`
+# Evil Portal :: M5 Stick C Plus (It's not my focus) / M5 Cardputer
+`Este projeto é um fork de projetos já existentes.`
 
-## Story
+`Como já mencionado originalmente, é de cunho inteiramente educacional para uso restrito em laboratórios próprios.`
 
-A Wi-Fi honeypot is a fake wireless network that is set up to lure unsuspecting users and collect their data or infect their devices with malware. It is a common technique used by hackers and cybercriminals to exploit the public’s demand for free Wi-Fi access.
+`Realizar qualquer uso deste além do mencionado acima estará sujeito à violação grave de privacidade de dados.`
 
-# PTBR - 🇧🇷
+Requeriments/Requisitos:
+- M5Cardputer
 
-Projeto com o intuito de ser apenas educacional, não me responsabilizando pelos atos cometidos por terceiros, o código esta configurado com um exemplo.
+  
+
+Description/Descrição:
+---
+[EN]
+
+The code creates a 'public AP' that establishes a Fake Captive Portal. This Captive Portal simulates common authentication processes used by public APs to provide internet access to devices after registration, similar to what is found in shopping malls, cafes, etc.
+
+[PT-BR]
+
+O código realiza a criação de um "AP público" na qual cria um Captive Portal Fake.
+Este Captive Portal é uma simulação de autenticação comum nas quais APs Públicos utilizam para fornecer internet aos dispositivos após cadastro (tal como Shoppings, Cafés e etc).
+
