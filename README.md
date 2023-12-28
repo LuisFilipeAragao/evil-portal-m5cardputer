@@ -27,3 +27,11 @@ Disclaimer:
 O código realiza a criação de um "AP público" na qual cria um Captive Portal Fake.
 Este Captive Portal é uma simulação de autenticação comum nas quais APs Públicos utilizam para fornecer internet aos dispositivos após cadastro (tal como Shoppings, Cafés e etc).
 
+---
+Changes/Alterações:
+
+[EN]: 
+Print credentials on the screen with sound for easy visualization in educational demonstrations.
+
+[PT-BR]: 
+Adicionado uma função para printar as credenciais na tela com um som para facilitar a visualização durante demonstrações informativas.
